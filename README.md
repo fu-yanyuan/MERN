@@ -17,3 +17,22 @@ learn react - https://react.dev/learn/start-a-new-react-project
 Vite - https://vitejs.dev/guide/why.html 
 
 https://www.mongodb.com/languages/mern-stack-tutorial
+
+
+# Server 
+
+## `npm` install
+```
+npm i express cors bcrypt jsonwebtoken uuid dotenv nodemon 
+npm i pg
+```
+
+test
+```
+npm run start 
+```
+## postgresql configure
+inside the psql database, run
+```
+GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA public TO <username>;
+```
