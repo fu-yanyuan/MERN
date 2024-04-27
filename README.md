@@ -36,3 +36,15 @@ inside the psql database, run
 ```
 GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA public TO <username>;
 ```
+
+# Client 
+
+`npm run dev`
+
+## trouble shooting
+
+### something wrong with packages
+```
+rm -rf node_modules package-lock.json
+npm install
+```

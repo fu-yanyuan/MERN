@@ -14,3 +14,4 @@ CREATE TABLE users (
 );
 
 INSERT INTO todos(id, user_email, title, progress, date) VALUES ('0', 'fu@rakut3n.com', 'Asakai', 10, '20240425');
+INSERT INTO todos(id, user_email, title, progress, date) VALUES ('0', 'fu@rakut3n.com', 'Lunch', 5, '20240426');

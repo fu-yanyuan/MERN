@@ -1,2 +1,3 @@
 to-do-app/server/node_modules
+to-do-app/client/node_modules
 to-do-app/server/.env
