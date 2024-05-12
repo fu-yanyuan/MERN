@@ -16,7 +16,7 @@ body {
     margin-top: 50px;
 }
 
-.button-container {
+.button-container, .info-container {
     display: flex;
     align-items: center;
 }
@@ -34,4 +34,140 @@ body {
     display: flex;
     justify-content: space-between;
     border-bottom: rgba(0, 0, 0, 0.05) 1px solid;
+}
+
+.edit {
+    border: 1.5px solid rgb(141, 181, 145);
+    color: rgb(141, 181, 145);
+    text-transform: uppercase;
+}
+
+.edit:hover {
+    background-color: rgb(182, 223, 186);
+}
+
+.edit:active {
+    color: rgb(255, 255, 255);
+    background-color: rgb(141, 181, 145);
+}
+
+.delete {
+    border: 1.5px solid rgb(255, 175, 163);
+    color: rgb(255, 175, 163);
+    text-transform: uppercase;
+}
+.delete:hover {
+    background-color: rgb(255, 201, 193);
+}
+
+.delete:active {
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 175, 163);
+}
+
+.create {
+    border: 1.5px solid rgb(141, 181, 145);
+    color: rgb(141, 181, 145);
+    text-transform: uppercase;
+}
+
+.create:hover {
+    background-color: rgb(182, 223, 186);
+}
+
+.create:active {
+    color: rgb(255, 255, 255);
+    background-color: rgb(141, 181, 145);
+}
+
+.signout {
+    border: 1.5px solid rgb(255, 175, 163);
+    color: rgb(255, 175, 163);
+    text-transform: uppercase;
+}
+.signout:hover {
+    background-color: rgb(255, 201, 193);
+}
+
+.signout:active {
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 175, 163);
+}
+
+input {
+    /* height: 40px;
+    font-size: 16px; */
+    margin: 10px 0;
+    padding: 10px, 16px;
+    border-radius: 12px;
+    border: 1.5px solid rgb(230, 232, 236);
+}
+
+/* Modal */
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    width: 500px;
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0 6px 24px 0, rgba(0, 0, 0, 0.08) 0 0 0 1px;
+}
+
+.modal input {
+    height: 40px;
+    font-size: 16px;
+    margin: 10px 0;
+    padding: 10px, 16px;
+    border-radius: 12px;
+    border: 1.5px solid rgb(230, 232, 236);
+}
+
+.modal .form-title-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal .form-title-container button {
+    border: none;
+    background-color: transparent;
+}
+
+.modal .form-title-container button:active {
+    color: rgb(255, 50, 50);
+}
+
+.modal form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal label {
+    font-size: 13px;
+}
+
+/* List Item */
+.list-item {
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0 0 0 1px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tick {
+    padding: 10px;
+    width: 25px;
+    height: 25px;
 }
