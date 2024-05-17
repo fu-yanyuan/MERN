@@ -3,9 +3,11 @@ import './App.css'
 
 import ListHeader from './components/ListHeader'
 import ListItem from './components/ListItem'
+import Auth from './components/Auth'
 
 function App() {
   const userEmail = 'fu@rakut3n.com'
+  const authed = false
   const [tasks, setTasks] = useState(null)
 
   const getData = async () => {
@@ -22,7 +24,12 @@ function App() {
 
   // set dependencies to []
   // //Runs only on the first render
-  useEffect(() => getData, [])
+  // useEffect(() => getData, [])
+  useEffect(() => {
+    if (authed) {
+      getData()
+    }
+  }, [])
 
   console.log(tasks)
 
@@ -32,8 +39,13 @@ function App() {
 
   return (
     <div className='app'>
-      <ListHeader listName={'🐼 Rakuten'} getData={getData}/>
-      {sortedTasks?.map((task) => <ListItem key={task.id} task={task} getData={getData}/>)}
+      {!authed && <Auth />}
+      {authed &&
+      <>
+        <ListHeader listName={userEmail} getData={getData}/>
+        {sortedTasks?.map((task) => <ListItem key={task.id} task={task} getData={getData}/>)}
+      </> }
+
     </div>
   )
 }

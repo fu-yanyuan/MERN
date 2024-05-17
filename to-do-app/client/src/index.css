@@ -171,3 +171,47 @@ input {
     width: 25px;
     height: 25px;
 }
+
+/* Auth */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+    padding: 30px;
+    /* background-color: white; */
+}
+
+.auth-container-box {
+    width: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.05) 0 6px 24px, rgba(0, 0, 0, 0.08) 0 0 0 1px;
+    background-color: white;
+}
+
+.auth-container-box form {
+    display: flex;
+    flex-direction: column;
+    /* height: 300px; */
+    padding: 20px;
+}
+
+.auth-container-box input {
+    height: 40px;
+    font-size: 16px;
+    margin: 10px 0;
+    padding: 10px, 16px;
+    border-radius: 12px;
+    border: 1.5px solid rgb(230, 232, 236);
+}
+
+.auth-options {
+    display: flex;
+} 
+
+.auth-options button {
+    width: 50%;
+    border: none;
+    padding: 10px;
+    color: rgb(40, 40, 40);
+}
