@@ -1,6 +1,9 @@
 import { React, useState } from "react"
+import { useCookies } from 'react-cookie'
 
 const Modal = ({mode, setShowModal, task, getData}) => {
+  const [cookies, setCookie, removeCookie] = useCookies(null)
+
   const editMode = mode === 'edit' ? true : false
 
   const getDateStr = () => {
@@ -19,7 +22,7 @@ const Modal = ({mode, setShowModal, task, getData}) => {
   }
 
   const [data, setData] = useState({
-    user_email: editMode ? task.user_email : "fu@rakut3n.com",
+    user_email: editMode ? task.user_email : cookies.Email,
     title: editMode ? task.title : '',
     progress: editMode ? task.progress : 0,
     date: editMode ? task.date : getDateStr()

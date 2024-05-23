@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { useCookies } from 'react-cookie'
 import './App.css'
 
 import ListHeader from './components/ListHeader'
@@ -6,8 +7,11 @@ import ListItem from './components/ListItem'
 import Auth from './components/Auth'
 
 function App() {
-  const userEmail = 'fu@rakut3n.com'
-  const authed = false
+  const [cookies, setCookie, removeCookie] = useCookies(null)
+  // const userEmail = 'fu@rakut3n.com'
+  // const authed = false
+  const userEmail = cookies.Email
+  const authed = cookies.AuthToken
   const [tasks, setTasks] = useState(null)
 
   const getData = async () => {
